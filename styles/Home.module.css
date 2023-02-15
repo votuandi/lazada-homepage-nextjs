@@ -7,3 +7,8 @@
   background-color: '#d3232a';
   padding: ;
 }
+
+.scrollednav {
+  position: fixed;
+  top: 0;
+}

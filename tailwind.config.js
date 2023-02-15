@@ -20,7 +20,8 @@ module.exports = {
         tet: '#a00809',
         milk: '#f5f5f5',
         blacktext: '#212121',
-        graytext: '#9e9e9e'
+        graytext: '#9e9e9e',
+        bg: '#f5f5f5'
       }
     }
   },

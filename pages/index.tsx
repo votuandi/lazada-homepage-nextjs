@@ -14,6 +14,10 @@ import { ModCardModel } from '@/models/modCard.model'
 import { LazMallModel } from '@/models/lazMall.model'
 import { ProductCategoryModel } from '@/models/productCategory.model'
 import ProductCategory from '@/components/ProductCategory'
+import { ProductModel } from '@/models/product.model'
+import Product from '@/components/Product'
+import Pagination from '@/components/Pagination'
+import CategoryMenu from '@/components/CategoryMenu'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,6 +30,9 @@ export default function Home() {
   const [flashSaleProducts, setFlashSaleProducts] = useState([])
   const [lazMalls, setLazMall] = useState([])
   const [productCategories, setProductCategories] = useState([])
+  const [products, setProduct] = useState([])
+  const [productPerPage, setProductPerPage] = useState(24)
+  const [totalPage, setTotalPage] = useState(0)
 
   const renderer = ({
     hours,
@@ -100,6 +107,17 @@ export default function Home() {
     }
   }
 
+  let getProducts = async (pageNumber: number) => {
+    try {
+      let res = await fetch('/assets/json/products.json')
+      let data = await res.json()
+      setTotalPage(Math.ceil(data.length / productPerPage))
+      setProduct(data.slice((pageNumber - 1) * productPerPage, pageNumber * productPerPage))
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   useEffect(() => {
     ;(async () => {
       await getFlashSaleProducts()
@@ -107,6 +125,7 @@ export default function Home() {
       await getContants()
       await getLazMall()
       await getProductCategories()
+      await getProducts(1)
     })()
   }, [])
 
@@ -142,76 +161,84 @@ export default function Home() {
             )}
           </div>
 
-          <div className="relative flex flex-row justify-evenly bg-slate-50 p-1">
-            {topActionLinks.map((item, ind) => (
-              <a href="" key={ind} className="cursor-pointer text-xs">
-                {item}
-              </a>
-            ))}
-          </div>
+          <div className=" relative flex flex-col ">
+            <div className="relative flex flex-row w-[1200px] justify-evenly self-center bg-slate-50 p-1">
+              {topActionLinks.map((item, ind) => (
+                <a href="" key={ind} className="cursor-pointer text-xs">
+                  {item}
+                </a>
+              ))}
+            </div>
 
-          <div className="relative bg-white h-20 flex flex-row content-end justify-around">
-            <img
-              className="object-contain w-[10vw] h-auto"
-              src="/assets/img/logo-lazada.png"
-              alt=""
-            />
-            <div className="w-[40vw] h-10 bg-slate-200 flex content-center justify-start self-center">
-              <input
-                className="bg-slate-200 p-4 text-base w-[40vw] "
-                type="text"
-                placeholder="Tìm kiếm trên Lazada"
+            <div className="relative bg-white h-[75px] flex flex-row content-end justify-around w-[1200px] self-center">
+              <img
+                className="object-contain w-[10vw] h-auto"
+                src="/assets/img/logo-lazada.png"
+                alt=""
               />
-              <button className=" bg-orange-500 ml-[auto]">
-                <img className={styles.searchBtn} src="/assets/icon/icon-search.svg" alt="" />
+              <div className="w-[30vw] h-10 bg-slate-200 flex content-center justify-start self-center">
+                <input
+                  className="bg-slate-200 p-4 text-base w-[40vw] "
+                  type="text"
+                  placeholder="Tìm kiếm trên Lazada"
+                />
+                <button className=" bg-orange-500 ml-[auto]">
+                  <img className={styles.searchBtn} src="/assets/icon/icon-search.svg" alt="" />
+                </button>
+              </div>
+              <button>
+                <img className="h-8" src="/assets/icon/icon-cart.svg" alt="" />
               </button>
+              <img
+                className="object-contain w-[12vw] h-auto"
+                src="/assets/img/zalopay.png"
+                alt=""
+              />
             </div>
-            <button>
-              <img className="h-8" src="/assets/icon/icon-cart.svg" alt="" />
-            </button>
-            <img className="object-contain w-[12vw] h-auto" src="/assets/img/zalopay.png" alt="" />
           </div>
 
-          <div className="ralative w-screen h-[344px] bg-tet justify-center content-center">
-            <Carousel
-              autoPlay={true}
-              infiniteLoop={true}
-              showArrows={false}
-              showStatus={false}
-              showIndicators={true}
-              showThumbs={false}
-            >
-              {sliderImageId.map((imgId) => (
-                <div key={imgId}>
-                  <img
-                    className="object-contain h-[344px] w-[90px]"
-                    src={`assets/img/slide-show-${imgId}.jpg`}
-                  />
-                </div>
-              ))}
-            </Carousel>
+          <div className=" relative flex flex-row">
+            <CategoryMenu />
+            <div className="ralative w-screen h-[344px] bg-tet my-5 justify-center content-center">
+              <Carousel
+                autoPlay={true}
+                infiniteLoop={true}
+                showArrows={false}
+                showStatus={false}
+                showIndicators={true}
+                showThumbs={false}
+              >
+                {sliderImageId.map((imgId) => (
+                  <div key={imgId}>
+                    <img
+                      className="object-contain h-[344px] w-[90px]"
+                      src={`assets/img/slide-show-${imgId}.jpg`}
+                    />
+                  </div>
+                ))}
+              </Carousel>
+            </div>
           </div>
 
-          <div className="relative bg-slate-100 w-screen flex flex-col">
-            <div className="relative w-[1200px] py-4 content-center justify-between flex flex-row self-center">
-              {modCards.map((modcard: ModCardModel) => (
-                <div
-                  className=" h-[40px] w-[16vw] bg-white flex flex-row flex-wrap content-center justify-start rounded-2xl"
-                  key={modcard.id}
-                >
-                  <img
-                    className=" object-contain w-[32px] h-[32px] self-center"
-                    src={`/assets/img/mod-cart-${modcard.img}.png`}
-                    alt=""
-                  />
-                  <p className="px-2 text-[21px] self-center">{modcard.title}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className=" relative flex flex-row justify-center content-end w-screen min-w-[1200px] h-fit bg-[url(//icms-image.slatic.net/images/ims-web/0fe02511-83d8-4ac8-a3f6-7f1cb8177e84.gif)]">
-              <div className=" relative w-[1200px] mt-[200px] flex flex-col self-center pb-10">
-                <h1 className=" relative text-2xl py-3">Deal Chớp Nhoáng</h1>
+          <div className="relative w-screen flex flex-col">
+            <div className=" relative flex flex-col justify-center content-end w-screen min-w-[1200px] h-fit pt-[200px] bg-[url(//icms-image.slatic.net/images/ims-web/0fe02511-83d8-4ac8-a3f6-7f1cb8177e84.gif)]">
+              <div className="relative w-[1200px] py-4 content-center justify-between flex flex-row self-center">
+                {modCards.map((modcard: ModCardModel) => (
+                  <div
+                    className=" h-[40px] w-[288px] px-1 bg-white flex flex-row flex-wrap content-center justify-start rounded-2xl"
+                    key={modcard.id}
+                  >
+                    <img
+                      className=" object-contain w-[32px] h-[32px] self-center"
+                      src={`/assets/img/mod-cart-${modcard.img}.png`}
+                      alt=""
+                    />
+                    <p className="px-2 text-[21px] self-center">{modcard.title}</p>
+                  </div>
+                ))}
+              </div>
+              <div className=" relative w-[1200px] flex flex-col self-center pb-6">
+                <h1 className=" relative text-[22px] text-blacktext py-1">Deal Chớp Nhoáng</h1>
                 <div className=" relative bg-white h-[60px] px-4 flex flex-row content-center">
                   <p className=" text-red-500 self-center">Đang bán</p>
                   <p className=" self-center mx-10">Kết thúc trong</p>
@@ -234,33 +261,56 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="relative flex flex-col justify-center content-center w-screen bg-bg">
+              <div className=" relative w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
+                <div className=" flex flex-row h-[38px] leading-[38px] content-center">
+                  <span className=" relative text-[22px] text-blacktext py-3 self-center">
+                    Laz Mall
+                  </span>
+                  <a className=" ml-[auto] align-baseline justify-center content-center" href="">
+                    <span className=" text-blue-500 font-medium self-center">Xem thêm &gt;</span>
+                  </a>
+                </div>
+                <div className=" relative w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
+                  {lazMalls.map((lazm: LazMallModel) => (
+                    <div className="self-center" key={lazm.id}>
+                      <LazMall lazMall={lazm} />
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-            <div className=" relative w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
-              <div className=" flex flex-row h-[38px] leading-[38px] content-center">
-                <span className=" relative text-2xl py-3 self-center">Laz Mall</span>
-                <a className=" ml-[auto] align-baseline justify-center content-center" href="">
-                  <span className=" text-blue-500 font-medium self-center">Xem thêm &gt;</span>
-                </a>
+              <div className=" relative w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
+                <div className=" flex flex-row h-fit leading-[38px] content-center">
+                  <span className=" relative text-[22px] text-blacktext py-3 self-center">
+                    Danh mục ngành hàng
+                  </span>
+                </div>
+                <div className=" relative w-full min-h-[300px] flex flex-row flex-wrap box-border">
+                  {productCategories.map((prc: ProductCategoryModel) => (
+                    <div className="self-center" key={prc.id}>
+                      <ProductCategory productCategory={prc} />
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className=" relative w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
-                {lazMalls.map((lazm: LazMallModel) => (
-                  <div className="self-center" key={lazm.id}>
-                    <LazMall lazMall={lazm} />
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            <div className=" relative w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
-              <div className=" flex flex-row h-fit leading-[38px] content-center">
-                <span className=" relative text-2xl py-3 self-center">Danh mục ngành hàng</span>
-              </div>
-              <div className=" relative w-full min-h-[300px] flex flex-row flex-wrap box-border">
-                {productCategories.map((prc: ProductCategoryModel) => (
-                  <div className="self-center" key={prc.id}>
-                    <ProductCategory productCategory={prc} />
-                  </div>
-                ))}
+              <div className=" relative w-[1200px] flex flex-col self-center  content-center align-baseline">
+                <div className=" flex flex-row h-fit leading-[38px] content-center">
+                  <span className=" relative text-[22px] text-blacktext py-3 self-center">
+                    Dành riêng cho bạn
+                  </span>
+                </div>
+                <div className=" relative w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
+                  {products.map((p: ProductModel) => (
+                    <div className="self-center" key={p.id}>
+                      <Product product={p} />
+                    </div>
+                  ))}
+                </div>
+                <div className=" relative self-center">
+                  <Pagination amountPage={totalPage} getProduct={getProducts} />
+                </div>
               </div>
             </div>
 

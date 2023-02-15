@@ -1,0 +1,1950 @@
+[{
+    "id": "0",
+    "name": "Thiết Bị Điện Tử",
+    "subMenu": [
+        {
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": [{
+                "id": "0-0",
+                "name": "Điện Thoại Di Động",
+                "subMenu": []
+            },
+            {
+                "id": "0-1",
+                "name": "Máy Tính Bảng",
+                "subMenu": []
+            },
+            {
+                "id": "0-2",
+                "name": "Laptop",
+                "subMenu": []
+            },
+            {
+                "id": "0-3",
+                "name": "Máy Tính Để Bàn",
+                "subMenu": []
+            },
+            {
+                "id": "0-4",
+                "name": "Âm Thanh",
+                "subMenu": []
+            },
+            {
+                "id": "0-5",
+                "name": "Camera Giám Sát",
+                "subMenu": []
+            },
+            {
+                "id": "0-6",
+                "name": "Máy Ảnh Kỷ Thuật Số",
+                "subMenu": []
+            },
+            {
+                "id": "0-7",
+                "name": "Máy Quay Phim",
+                "subMenu": []
+            },
+            {
+                "id": "0-8",
+                "name": "Màn Hình Vi Tính",
+                "subMenu": []
+            },
+            {
+                "id": "0-9",
+                "name": "Máy In",
+                "subMenu": []
+            },
+            {
+                "id": "0-10",
+                "name": "Đồng Hồ Thông Minh",
+                "subMenu": []
+            },
+            {
+                "id": "0-11",
+                "name": "Máy Chơi Game",
+                "subMenu": []
+            }]
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": [{
+                "id": "0-0",
+                "name": "Điện Thoại Di Động",
+                "subMenu": []
+            },
+            {
+                "id": "0-1",
+                "name": "Máy Tính Bảng",
+                "subMenu": []
+            },
+            {
+                "id": "0-2",
+                "name": "Laptop",
+                "subMenu": []
+            },
+            {
+                "id": "0-3",
+                "name": "Máy Tính Để Bàn",
+                "subMenu": []
+            },
+            {
+                "id": "0-4",
+                "name": "Âm Thanh",
+                "subMenu": []
+            },
+            {
+                "id": "0-5",
+                "name": "Camera Giám Sát",
+                "subMenu": []
+            },
+            {
+                "id": "0-6",
+                "name": "Máy Ảnh Kỷ Thuật Số",
+                "subMenu": []
+            },
+            {
+                "id": "0-7",
+                "name": "Máy Quay Phim",
+                "subMenu": []
+            },
+            {
+                "id": "0-8",
+                "name": "Màn Hình Vi Tính",
+                "subMenu": []
+            },
+            {
+                "id": "0-9",
+                "name": "Máy In",
+                "subMenu": []
+            },
+            {
+                "id": "0-10",
+                "name": "Đồng Hồ Thông Minh",
+                "subMenu": []
+            },
+            {
+                "id": "0-11",
+                "name": "Máy Chơi Game",
+                "subMenu": []
+            }]
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": [{
+                "id": "0-0",
+                "name": "Điện Thoại Di Động",
+                "subMenu": []
+            },
+            {
+                "id": "0-1",
+                "name": "Máy Tính Bảng",
+                "subMenu": []
+            },
+            {
+                "id": "0-2",
+                "name": "Laptop",
+                "subMenu": []
+            },
+            {
+                "id": "0-3",
+                "name": "Máy Tính Để Bàn",
+                "subMenu": []
+            },
+            {
+                "id": "0-4",
+                "name": "Âm Thanh",
+                "subMenu": []
+            },
+            {
+                "id": "0-5",
+                "name": "Camera Giám Sát",
+                "subMenu": []
+            },
+            {
+                "id": "0-6",
+                "name": "Máy Ảnh Kỷ Thuật Số",
+                "subMenu": []
+            },
+            {
+                "id": "0-7",
+                "name": "Máy Quay Phim",
+                "subMenu": []
+            },
+            {
+                "id": "0-8",
+                "name": "Màn Hình Vi Tính",
+                "subMenu": []
+            },
+            {
+                "id": "0-9",
+                "name": "Máy In",
+                "subMenu": []
+            },
+            {
+                "id": "0-10",
+                "name": "Đồng Hồ Thông Minh",
+                "subMenu": []
+            },
+            {
+                "id": "0-11",
+                "name": "Máy Chơi Game",
+                "subMenu": []
+            }]
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": [{
+                "id": "0-0",
+                "name": "Điện Thoại Di Động",
+                "subMenu": []
+            },
+            {
+                "id": "0-1",
+                "name": "Máy Tính Bảng",
+                "subMenu": []
+            },
+            {
+                "id": "0-2",
+                "name": "Laptop",
+                "subMenu": []
+            },
+            {
+                "id": "0-3",
+                "name": "Máy Tính Để Bàn",
+                "subMenu": []
+            },
+            {
+                "id": "0-4",
+                "name": "Âm Thanh",
+                "subMenu": []
+            },
+            {
+                "id": "0-5",
+                "name": "Camera Giám Sát",
+                "subMenu": []
+            },
+            {
+                "id": "0-6",
+                "name": "Máy Ảnh Kỷ Thuật Số",
+                "subMenu": []
+            },
+            {
+                "id": "0-7",
+                "name": "Máy Quay Phim",
+                "subMenu": []
+            },
+            {
+                "id": "0-8",
+                "name": "Màn Hình Vi Tính",
+                "subMenu": []
+            },
+            {
+                "id": "0-9",
+                "name": "Máy In",
+                "subMenu": []
+            },
+            {
+                "id": "0-10",
+                "name": "Đồng Hồ Thông Minh",
+                "subMenu": []
+            },
+            {
+                "id": "0-11",
+                "name": "Máy Chơi Game",
+                "subMenu": []
+            }]
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }
+    ]
+},
+{
+    "id": "1",
+    "name": "Phụ Kiện Điện Tử",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": []
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "2",
+    "name": "TV & Thiết Bị Gia Dụng",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": []
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": []
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "3",
+    "name": "Sức Khỏe & làm Đẹp",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": []
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": []
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": []
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "4",
+    "name": "Hàng Mẹ, Bé & Đồ Chơi",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": []
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": []
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": [{
+            "id": "0-0",
+            "name": "Điện Thoại Di Động",
+            "subMenu": []
+        },
+        {
+            "id": "0-1",
+            "name": "Máy Tính Bảng",
+            "subMenu": []
+        },
+        {
+            "id": "0-2",
+            "name": "Laptop",
+            "subMenu": []
+        },
+        {
+            "id": "0-3",
+            "name": "Máy Tính Để Bàn",
+            "subMenu": []
+        },
+        {
+            "id": "0-4",
+            "name": "Âm Thanh",
+            "subMenu": []
+        },
+        {
+            "id": "0-5",
+            "name": "Camera Giám Sát",
+            "subMenu": []
+        },
+        {
+            "id": "0-6",
+            "name": "Máy Ảnh Kỷ Thuật Số",
+            "subMenu": []
+        },
+        {
+            "id": "0-7",
+            "name": "Máy Quay Phim",
+            "subMenu": []
+        },
+        {
+            "id": "0-8",
+            "name": "Màn Hình Vi Tính",
+            "subMenu": []
+        },
+        {
+            "id": "0-9",
+            "name": "Máy In",
+            "subMenu": []
+        },
+        {
+            "id": "0-10",
+            "name": "Đồng Hồ Thông Minh",
+            "subMenu": []
+        },
+        {
+            "id": "0-11",
+            "name": "Máy Chơi Game",
+            "subMenu": []
+        }]
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": []
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": []
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "5",
+    "name": "Siêu thị Tạp Hóa",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": []
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": []
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": []
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": []
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": []
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": []
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "6",
+    "name": "Hàng Gia Dụng & Đời Sống",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": []
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": []
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": []
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": []
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": []
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": []
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "7",
+    "name": "Thời Trang Và Phụ Kiện Nữ",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": []
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": []
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": []
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": []
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": []
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": []
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "8",
+    "name": "Thời Trang Và Phụ Kiện Nam",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": []
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": []
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": []
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": []
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": []
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": []
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "9",
+    "name": "Thời Trang Và Phụ Kiện Trẻ Em",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": []
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": []
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": []
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": []
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": []
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": []
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "10",
+    "name": "Thể Thao Và Du Lịch",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": []
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": []
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": []
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": []
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": []
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": []
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+},
+{
+    "id": "11",
+    "name": "Ôtô, Xe Máy & Thiết Bị Định Vị",
+    "subMenu": [{
+        "id": "0-0",
+        "name": "Điện Thoại Di Động",
+        "subMenu": []
+    },
+    {
+        "id": "0-1",
+        "name": "Máy Tính Bảng",
+        "subMenu": []
+    },
+    {
+        "id": "0-2",
+        "name": "Laptop",
+        "subMenu": []
+    },
+    {
+        "id": "0-3",
+        "name": "Máy Tính Để Bàn",
+        "subMenu": []
+    },
+    {
+        "id": "0-4",
+        "name": "Âm Thanh",
+        "subMenu": []
+    },
+    {
+        "id": "0-5",
+        "name": "Camera Giám Sát",
+        "subMenu": []
+    },
+    {
+        "id": "0-6",
+        "name": "Máy Ảnh Kỷ Thuật Số",
+        "subMenu": []
+    },
+    {
+        "id": "0-7",
+        "name": "Máy Quay Phim",
+        "subMenu": []
+    },
+    {
+        "id": "0-8",
+        "name": "Màn Hình Vi Tính",
+        "subMenu": []
+    },
+    {
+        "id": "0-9",
+        "name": "Máy In",
+        "subMenu": []
+    },
+    {
+        "id": "0-10",
+        "name": "Đồng Hồ Thông Minh",
+        "subMenu": []
+    },
+    {
+        "id": "0-11",
+        "name": "Máy Chơi Game",
+        "subMenu": []
+    }]
+}]
