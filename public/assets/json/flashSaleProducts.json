@@ -1,0 +1,42 @@
+[{
+    "id": "0",
+    "name": "Giày thể thao No Brand. Hàng Quảng Châu Cao Cấp",
+    "orgPrice": 15000,
+    "fnPrice": 8000,
+    "img": "product-01.jpg"
+},
+{
+    "id": "1",
+    "name": "Dép quai ngang nữ, Dép đi trong nhà ếch xanh thêu nổi cực xinh",
+    "orgPrice": 15000,
+    "fnPrice": 8000,
+    "img": "product-01.jpg"
+},
+{
+    "id": "2",
+    "name": "Quần đùi cao cấp",
+    "orgPrice": 70000,
+    "fnPrice": 45000,
+    "img": "product-01.jpg"
+},
+{
+    "id": "3",
+    "name": "Kem đánh răng PS hương táo đỏ",
+    "orgPrice": 28000,
+    "fnPrice": 20000,
+    "img": "product-01.jpg"
+},
+{
+    "id": "4",
+    "name": "Trang phục bóng đá Real Madrid mùa giải 2022-2023 sân nhà",
+    "orgPrice": 220000,
+    "fnPrice": 150000,
+    "img": "product-01.jpg"
+},
+{
+    "id": "5",
+    "name": "Bộ dụng cụ nhà bếp bằng gỗ cao cấp",
+    "orgPrice": 80000,
+    "fnPrice": 33000,
+    "img": "product-01.jpg"
+}]

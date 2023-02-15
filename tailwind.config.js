@@ -9,7 +9,17 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        vw5: '5vw',
+        vw5: '7.5vw',
+        vw10: '10vw',
+        vw20: '20vw'
+      },
+      colors: {
+        tet: '#a00809',
+      }
+    }
   },
   plugins: [],
 }

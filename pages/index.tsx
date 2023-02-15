@@ -1,11 +1,83 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import { useEffect, useState } from 'react'
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import { Carousel } from 'react-responsive-carousel'
+import Countdown from 'react-countdown'
+import ProductCard from '@/components/ProductCard'
+import { FlashSaleProduct } from '@/models/flashSaleProduct'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [isShowAH, setShowAH] = useState(true)
+  const [count, setCount] = useState(0)
+  const [topActionLinks, setTopActionLinks] = useState([
+    'TIẾT KIỆM HƠN VỚI ỨNG DỤNG',
+    'BÁN HÀNG CÙNG LAZADA',
+    'CHĂM SÓC KHÁCH HÀNG',
+    'KIỂM TRA ĐƠN HÀNG',
+    'ĐĂNG NHẬP',
+    'ĐĂNG KÝ',
+    'CHANGE LANGUAGE',
+  ])
+  const [sliderImageId, setSliderImageId] = useState([
+    '01',
+    '02',
+    '03',
+    '04',
+    '05',
+    '06',
+    '07',
+    '08',
+    '09',
+    '10',
+  ])
+  const [modCards, setModCards] = useState([
+    { img: 'lazmall', title: 'LazMall' },
+    { img: 'coupon', title: 'Mã Giảm Giá' },
+    { img: 'voucher', title: 'Nạp Thẻ & eVoucher' },
+    { img: 'lazglobal', title: 'LazGlobal' },
+  ])
+  const [dateTimer, setDateTimer] = useState(Date.now() + 40000000)
+  const [flashSaleProducts, setFlashSaleProducts] = useState([{}])
+
+  const renderer = ({
+    hours,
+    minutes,
+    seconds,
+    completed,
+  }: {
+    hours: number
+    minutes: number
+    seconds: number
+    completed: boolean
+  }) => {
+    if (completed) {
+      setDateTimer(Date.now() + 5000)
+    } else {
+      return (
+        <span>
+          {hours}:{minutes}:{seconds}
+        </span>
+      )
+    }
+  }
+
+  useEffect(() => {
+    ;(async () => {
+      try {
+        let res = await fetch('/assets/json/flashSaleProducts.json')
+        let data = await res.json()
+        setFlashSaleProducts(data)
+      } catch (error) {}
+    })()
+  }, [])
+
   return (
     <>
       <Head>
@@ -14,108 +86,136 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <main>
+        <div className="relative flex flex-col justify-center content-center w-screen">
+          <div className="w-screen">
+            {isShowAH === true && (
+              <>
+                <div className="relative w-screen h-[80px] bg-tet">
+                  {/* <Image className='object-contain w-screen h-[80px]' src="/assets/img/qc-head.png" alt='' width={2000} height={1000}/> */}
+                  <img
+                    className="object-contain w-screen h-[80px]"
+                    src="/assets/img/qc-head.png"
+                    alt=""
+                  />
+                </div>
+                <button
+                  className="font-bold text-2xl text-white absolute right-10 top-2 z-10"
+                  onClick={() => {
+                    setShowAH(false)
+                  }}
+                >
+                  X
+                </button>
+              </>
+            )}
           </div>
-        </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
+          <div className="relative flex flex-row justify-evenly bg-slate-50 p-1">
+            {topActionLinks.map((item, ind) => (
+              <a href="" key={ind} className="cursor-pointer text-xs">
+                {item}
+              </a>
+            ))}
+          </div>
+
+          <div className="relative bg-white h-20 flex flex-row content-end justify-around">
+            <img
+              className="object-contain w-[10vw] h-auto"
+              src="/assets/img/logo-lazada.png"
+              alt=""
             />
+            <div className="w-[40vw] h-10 bg-slate-200 flex content-center justify-start self-center">
+              <input
+                className="bg-slate-200 p-4 text-base w-[40vw] "
+                type="text"
+                placeholder="Tìm kiếm trên Lazada"
+              />
+              <button className=" bg-orange-500 ml-[auto]">
+                <img className={styles.searchBtn} src="/assets/icon/icon-search.svg" alt="" />
+              </button>
+            </div>
+            <button>
+              <img className="h-8" src="/assets/icon/icon-cart.svg" alt="" />
+            </button>
+            <img className="object-contain w-[12vw] h-auto" src="/assets/img/zalopay.png" alt="" />
           </div>
-        </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
+          <div className="ralative w-screen h-[344px] bg-tet justify-center content-center">
+            <Carousel
+              autoPlay={true}
+              infiniteLoop={true}
+              showArrows={false}
+              showStatus={false}
+              showIndicators={true}
+              showThumbs={false}
+            >
+              {sliderImageId.map((imgId) => (
+                <div key={imgId}>
+                  <img
+                    className="object-contain h-[344px] w-[90px]"
+                    src={`assets/img/slide-show-${imgId}.jpg`}
+                  />
+                </div>
+              ))}
+            </Carousel>
+          </div>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
+          <div className="relative bg-slate-100 w-screen flex flex-col">
+            <div className="relative w-[1200px] py-4 content-center justify-between flex flex-row self-center">
+              {modCards.map((modcard) => (
+                <div
+                  className=" h-[40px] w-[16vw] bg-white flex flex-row flex-wrap content-center justify-start rounded-2xl"
+                  key={modcard.img}
+                >
+                  <img
+                    className=" object-contain w-[32px] h-[32px] self-center"
+                    src={`/assets/img/mod-cart-${modcard.img}.png`}
+                    alt=""
+                  />
+                  <p className="px-2 text-[21px] self-center">{modcard.title}</p>
+                </div>
+              ))}
+            </div>
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
+            <div className=" relative w-[1200px] flex flex-col self-center pb-10">
+              <h1 className=" relative text-2xl py-3">Deal Chớp Nhoáng</h1>
+              <div className=" relative bg-white h-[60px] px-4 flex flex-row content-center">
+                <p className=" text-red-500 self-center">Đang bán</p>
+                <p className=" self-center mx-10">Kết thúc trong</p>
+                <Countdown
+                  className=" self-center timer"
+                  date={dateTimer}
+                  renderer={renderer}
+                  overtime={true}
+                />
+                <button className="ml-[auto] mx-[1px] text-orange-500 border-2 border-orange-500 h-[40px] self-center px-8">
+                  MUA SẮM TOÀN BỘ SẢN PHẨM
+                </button>
+              </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+              <div className=" relative w-[1200px] h-fit bg-white flex flex-row flex-wrap content-center justify-between p-2">
+                {flashSaleProducts.map((p: FlashSaleProduct) => (
+                  <div className="self-center" key={p.id}>
+                    <ProductCard
+                      title={p.name ? p.name : ''}
+                      finalPrice={p.fnPrice ? p.fnPrice : 0}
+                      originalPrice={p.orgPrice ? p.orgPrice : 0}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className=" relative w-[1200px] flex flex-col self-center pb-10">
+              <div className=" flex flex-row">
+                <span className=" relative text-2xl py-3">Laz Mall</span>
+                <span>Xem thêm &gt;</span>
+              </div>
+            </div>
+
+            <div className="bg-blue-200 h-28 "></div>
+          </div>
         </div>
       </main>
     </>
