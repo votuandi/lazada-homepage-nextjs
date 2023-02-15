@@ -1,0 +1,43 @@
+[{
+    "id": "0",
+    "bigImg": "lazmall-01-l.jpg",
+    "smallImg": "lazmall-01-s.jpg",
+    "name": "DK Harvest",
+    "subName": "Hạt Dinh Dưỡng"
+},
+{
+    "id": "1",
+    "bigImg": "lazmall-02-l.jpg",
+    "smallImg": "lazmall-02-s.jpg",
+    "name": "Kymdan",
+    "subName": "Nệm Kymdan"
+},
+{
+    "id": "2",
+    "bigImg": "lazmall-03-l.jpg",
+    "smallImg": "lazmall-03-s.jpg",
+    "name": "Dosreal",
+    "subName": "Dosreal"
+},
+{
+    "id": "3",
+    "bigImg": "lazmall-06-l.jpg",
+    "smallImg": "lazmall-06-s.jpg",
+    "name": "Anello",
+    "subName": "Anello"
+},
+{
+    "id": "4",
+    "bigImg": "lazmall-02-l.jpg",
+    "smallImg": "lazmall-02-s.jpg",
+    "name": "Thien Huong Foods",
+    "subName": "Thien Huong Foods"
+},
+{
+    "id": "5",
+    "bigImg": "lazmall-04-l.jpg",
+    "smallImg": "lazmall-04-s.jpg",
+    "name": "Thảo Nguyên Shop",
+    "subName": "Thảo Nguyên Shop"
+}
+]

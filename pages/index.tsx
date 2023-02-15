@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
@@ -9,42 +8,24 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loa
 import { Carousel } from 'react-responsive-carousel'
 import Countdown from 'react-countdown'
 import ProductCard from '@/components/ProductCard'
-import { FlashSaleProduct } from '@/models/flashSaleProduct'
+import LazMall from '@/components/LazMall'
+import { FlashSaleProductModel } from '@/models/flashSaleProduct.model'
+import { ModCardModel } from '@/models/modCard.model'
+import { LazMallModel } from '@/models/lazMall.model'
+import { ProductCategoryModel } from '@/models/productCategory.model'
+import ProductCategory from '@/components/ProductCategory'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [isShowAH, setShowAH] = useState(true)
-  const [count, setCount] = useState(0)
-  const [topActionLinks, setTopActionLinks] = useState([
-    'TIẾT KIỆM HƠN VỚI ỨNG DỤNG',
-    'BÁN HÀNG CÙNG LAZADA',
-    'CHĂM SÓC KHÁCH HÀNG',
-    'KIỂM TRA ĐƠN HÀNG',
-    'ĐĂNG NHẬP',
-    'ĐĂNG KÝ',
-    'CHANGE LANGUAGE',
-  ])
-  const [sliderImageId, setSliderImageId] = useState([
-    '01',
-    '02',
-    '03',
-    '04',
-    '05',
-    '06',
-    '07',
-    '08',
-    '09',
-    '10',
-  ])
-  const [modCards, setModCards] = useState([
-    { img: 'lazmall', title: 'LazMall' },
-    { img: 'coupon', title: 'Mã Giảm Giá' },
-    { img: 'voucher', title: 'Nạp Thẻ & eVoucher' },
-    { img: 'lazglobal', title: 'LazGlobal' },
-  ])
+  const [topActionLinks, setTopActionLinks] = useState([])
+  const [sliderImageId, setSliderImageId] = useState([])
+  const [modCards, setModCards] = useState([])
   const [dateTimer, setDateTimer] = useState(Date.now() + 40000000)
-  const [flashSaleProducts, setFlashSaleProducts] = useState([{}])
+  const [flashSaleProducts, setFlashSaleProducts] = useState([])
+  const [lazMalls, setLazMall] = useState([])
+  const [productCategories, setProductCategories] = useState([])
 
   const renderer = ({
     hours,
@@ -68,13 +49,64 @@ export default function Home() {
     }
   }
 
+  let getContants = async () => {
+    try {
+      let res = await fetch('/assets/json/contants.json')
+      let data = await res.json()
+      setTopActionLinks(data.topActionLinks)
+      setSliderImageId(data.sliderImageId)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  let getFlashSaleProducts = async () => {
+    try {
+      let res = await fetch('/assets/json/flashSaleProducts.json')
+      let data = await res.json()
+      setFlashSaleProducts(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  let getModCard = async () => {
+    try {
+      let res = await fetch('/assets/json/modCards.json')
+      let data = await res.json()
+      setModCards(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  let getLazMall = async () => {
+    try {
+      let res = await fetch('/assets/json/lazMalls.json')
+      let data = await res.json()
+      setLazMall(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  let getProductCategories = async () => {
+    try {
+      let res = await fetch('/assets/json/productCategories.json')
+      let data = await res.json()
+      setProductCategories(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   useEffect(() => {
     ;(async () => {
-      try {
-        let res = await fetch('/assets/json/flashSaleProducts.json')
-        let data = await res.json()
-        setFlashSaleProducts(data)
-      } catch (error) {}
+      await getFlashSaleProducts()
+      await getModCard()
+      await getContants()
+      await getLazMall()
+      await getProductCategories()
     })()
   }, [])
 
@@ -92,7 +124,6 @@ export default function Home() {
             {isShowAH === true && (
               <>
                 <div className="relative w-screen h-[80px] bg-tet">
-                  {/* <Image className='object-contain w-screen h-[80px]' src="/assets/img/qc-head.png" alt='' width={2000} height={1000}/> */}
                   <img
                     className="object-contain w-screen h-[80px]"
                     src="/assets/img/qc-head.png"
@@ -163,10 +194,10 @@ export default function Home() {
 
           <div className="relative bg-slate-100 w-screen flex flex-col">
             <div className="relative w-[1200px] py-4 content-center justify-between flex flex-row self-center">
-              {modCards.map((modcard) => (
+              {modCards.map((modcard: ModCardModel) => (
                 <div
                   className=" h-[40px] w-[16vw] bg-white flex flex-row flex-wrap content-center justify-start rounded-2xl"
-                  key={modcard.img}
+                  key={modcard.id}
                 >
                   <img
                     className=" object-contain w-[32px] h-[32px] self-center"
@@ -178,39 +209,58 @@ export default function Home() {
               ))}
             </div>
 
-            <div className=" relative w-[1200px] flex flex-col self-center pb-10">
-              <h1 className=" relative text-2xl py-3">Deal Chớp Nhoáng</h1>
-              <div className=" relative bg-white h-[60px] px-4 flex flex-row content-center">
-                <p className=" text-red-500 self-center">Đang bán</p>
-                <p className=" self-center mx-10">Kết thúc trong</p>
-                <Countdown
-                  className=" self-center timer"
-                  date={dateTimer}
-                  renderer={renderer}
-                  overtime={true}
-                />
-                <button className="ml-[auto] mx-[1px] text-orange-500 border-2 border-orange-500 h-[40px] self-center px-8">
-                  MUA SẮM TOÀN BỘ SẢN PHẨM
-                </button>
+            <div className=" relative flex flex-row justify-center content-end w-screen min-w-[1200px] h-fit bg-[url(//icms-image.slatic.net/images/ims-web/0fe02511-83d8-4ac8-a3f6-7f1cb8177e84.gif)]">
+              <div className=" relative w-[1200px] mt-[200px] flex flex-col self-center pb-10">
+                <h1 className=" relative text-2xl py-3">Deal Chớp Nhoáng</h1>
+                <div className=" relative bg-white h-[60px] px-4 flex flex-row content-center">
+                  <p className=" text-red-500 self-center">Đang bán</p>
+                  <p className=" self-center mx-10">Kết thúc trong</p>
+                  <Countdown
+                    className=" self-center timer"
+                    date={dateTimer}
+                    renderer={renderer}
+                    overtime={true}
+                  />
+                  <button className="ml-[auto] mx-[1px] text-orange-500 border-2 border-orange-500 h-[40px] self-center px-8">
+                    MUA SẮM TOÀN BỘ SẢN PHẨM
+                  </button>
+                </div>{' '}
+                <div className=" relative w-[1200px] h-fit bg-white flex flex-row flex-wrap content-center justify-between p-2">
+                  {flashSaleProducts.map((p: FlashSaleProductModel) => (
+                    <div className="self-center" key={p.id}>
+                      <ProductCard flashSaleProduct={p} />
+                    </div>
+                  ))}
+                </div>
               </div>
+            </div>
 
-              <div className=" relative w-[1200px] h-fit bg-white flex flex-row flex-wrap content-center justify-between p-2">
-                {flashSaleProducts.map((p: FlashSaleProduct) => (
-                  <div className="self-center" key={p.id}>
-                    <ProductCard
-                      title={p.name ? p.name : ''}
-                      finalPrice={p.fnPrice ? p.fnPrice : 0}
-                      originalPrice={p.orgPrice ? p.orgPrice : 0}
-                    />
+            <div className=" relative w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
+              <div className=" flex flex-row h-[38px] leading-[38px] content-center">
+                <span className=" relative text-2xl py-3 self-center">Laz Mall</span>
+                <a className=" ml-[auto] align-baseline justify-center content-center" href="">
+                  <span className=" text-blue-500 font-medium self-center">Xem thêm &gt;</span>
+                </a>
+              </div>
+              <div className=" relative w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
+                {lazMalls.map((lazm: LazMallModel) => (
+                  <div className="self-center" key={lazm.id}>
+                    <LazMall lazMall={lazm} />
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className=" relative w-[1200px] flex flex-col self-center pb-10">
-              <div className=" flex flex-row">
-                <span className=" relative text-2xl py-3">Laz Mall</span>
-                <span>Xem thêm &gt;</span>
+            <div className=" relative w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
+              <div className=" flex flex-row h-fit leading-[38px] content-center">
+                <span className=" relative text-2xl py-3 self-center">Danh mục ngành hàng</span>
+              </div>
+              <div className=" relative w-full min-h-[300px] flex flex-row flex-wrap box-border">
+                {productCategories.map((prc: ProductCategoryModel) => (
+                  <div className="self-center" key={prc.id}>
+                    <ProductCategory productCategory={prc} />
+                  </div>
+                ))}
               </div>
             </div>
 

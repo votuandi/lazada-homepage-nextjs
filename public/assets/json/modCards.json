@@ -1,0 +1,6 @@
+[
+    { "id": 0, "img": "lazmall", "title": "LazMall" },
+    { "id": 1, "img": "coupon", "title": "Mã Giảm Giá" },
+    { "id": 2, "img": "voucher", "title": "Nạp Thẻ & eVoucher" },
+    { "id": 3, "img": "lazglobal", "title": "LazGlobal" }
+]

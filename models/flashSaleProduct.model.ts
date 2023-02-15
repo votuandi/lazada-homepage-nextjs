@@ -1,4 +1,4 @@
-export interface FlashSaleProduct {
+export interface FlashSaleProductModel {
     id?: string,
     name?: string,
     orgPrice?: number,

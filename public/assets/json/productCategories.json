@@ -1,0 +1,80 @@
+[{
+    "id": "0",
+    "name": "Điện thoại di động",
+    "img": "prc_04.jpg"
+},
+{
+    "id": "1",
+    "name": "Dưỡng da & Serum",
+    "img": "prc_07.jpg"
+},
+{
+    "id": "2",
+    "name": "Bộ đồ chơi lắp ráp",
+    "img": "prc_11.jpg"
+},
+{
+    "id": "3",
+    "name": "Ốp lưng & bao da điện thoại",
+    "img": "prc_10.jpg"
+},
+{
+    "id": "4",
+    "name": "Tẩy trang",
+    "img": "prc_14.jpg"
+},
+{
+    "id": "5",
+    "name": "Son tint",
+    "img": "prc_05.jpg"
+},
+{
+    "id": "6",
+    "name": "Bộ sạc không dây",
+    "img": "prc_03.jpg"
+},
+{
+    "id": "7",
+    "name": "Mạch điện & Linh kiện",
+    "img": "prc_16.jpg"
+},
+{
+    "id": "8",
+    "name": "Tai nghe nhét tai không dây",
+    "img": "prc_15.jpg"
+},
+{
+    "id": "9",
+    "name": "Cáp & Dock sạc",
+    "img": "prc_06.jpg"
+},
+{
+    "id": "10",
+    "name": "Giày sneaker nam",
+    "img": "prc_12.jpg"
+},
+{
+    "id": "11",
+    "name": "Mô hình nhân vật",
+    "img": "prc_13.jpg"
+},
+{
+    "id": "12",
+    "name": "Đồng hồ thông minh",
+    "img": "prc_01.jpg"
+},
+{
+    "id": "13",
+    "name": "Camera IP kết nối Internet",
+    "img": "prc_08.jpg"
+},
+{
+    "id": "14",
+    "name": "Kem chống nắng",
+    "img": "prc_02.jpg"
+},
+{
+    "id": "15",
+    "name": "Dầu gội",
+    "img": "prc_09.jpg"
+}]
