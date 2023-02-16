@@ -18,13 +18,14 @@ import { ProductModel } from '@/models/product.model'
 import Product from '@/components/Product'
 import Pagination from '@/components/Pagination'
 import CategoryMenu from '@/components/CategoryMenu'
+import SlideShow from '@/components/SlideShow'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [isShowAH, setShowAH] = useState(true)
   const [topActionLinks, setTopActionLinks] = useState([])
-  const [sliderImageId, setSliderImageId] = useState([])
+  const [sliderImageId, setSliderImageId] = useState(['01'])
   const [modCards, setModCards] = useState([])
   const [dateTimer, setDateTimer] = useState(Date.now() + 40000000)
   const [flashSaleProducts, setFlashSaleProducts] = useState([])
@@ -197,26 +198,28 @@ export default function Home() {
             </div>
           </div>
 
-          <div className=" relative flex flex-row">
+          <div className=" relative flex flex-row w-[1200px] h-[344px] justify-center content-center self-center">
             <CategoryMenu />
-            <div className="ralative w-screen h-[344px] bg-tet my-5 justify-center content-center">
-              <Carousel
+            <div className="ralative w-[1000px] h-[344px] bg-tet justify-center content-center">
+              <SlideShow images={sliderImageId} />
+              {/* <Carousel
                 autoPlay={true}
                 infiniteLoop={true}
                 showArrows={false}
                 showStatus={false}
                 showIndicators={true}
                 showThumbs={false}
+                width={1000}
               >
                 {sliderImageId.map((imgId) => (
                   <div key={imgId}>
                     <img
-                      className="object-contain h-[344px] w-[90px]"
+                      className="object-contain h-[344px] w-auto"
                       src={`assets/img/slide-show-${imgId}.jpg`}
                     />
                   </div>
                 ))}
-              </Carousel>
+              </Carousel> */}
             </div>
           </div>
 
@@ -302,8 +305,8 @@ export default function Home() {
                   </span>
                 </div>
                 <div className=" relative w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
-                  {products.map((p: ProductModel) => (
-                    <div className="self-center" key={p.id}>
+                  {products.map((p: ProductModel, i) => (
+                    <div className="self-center" key={i}>
                       <Product product={p} />
                     </div>
                   ))}

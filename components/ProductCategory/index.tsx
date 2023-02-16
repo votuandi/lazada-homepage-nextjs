@@ -14,7 +14,7 @@ export default function ProductCategory({ productCategory }: IProps) {
         src={`/assets/img/product-category/${productCategory.img}`}
         alt=""
       />
-      <p className=" text-sm leading-lg text-blacktext self-center text-center relative mt-2 mx-3">
+      <p className=" text-sm leading-lg text-midgray self-center text-center relative mt-2 mx-3">
         {productCategory.name}
       </p>
     </div>

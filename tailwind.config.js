@@ -18,7 +18,7 @@ module.exports = {
       },
       colors: {
         tet: '#a00809',
-        milk: '#f5f5f5',
+        midgray: '#757575',
         blacktext: '#212121',
         graytext: '#9e9e9e',
         bg: '#f5f5f5'

@@ -47,16 +47,18 @@ export default function Product({ product }: IProps) {
             <div className=" relative flex flex-row h-[14px] self-center justify-start">
               {[...Array(Math.ceil(product.star ? product.star : 0))]
                 .map((x) => 0)
-                .map((s) => (
+                .map((s, i) => (
                   <img
+                    key={i}
                     className=" w-[11px] h-[11px] align-baseline"
                     src="/assets/icon/icon-golden-star.svg"
                   />
                 ))}
               {[...Array(5 - Math.ceil(product.star ? product.star : 0))]
                 .map((x) => 0)
-                .map((s) => (
+                .map((s, i) => (
                   <img
+                    key={i}
                     className=" w-[11px] h-[11px] grayscale align-baseline"
                     src="/assets/icon/icon-golden-star.svg"
                   />

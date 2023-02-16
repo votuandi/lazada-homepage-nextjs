@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import * as React from 'react'
 import styles from './styles.module.css'
 import { FlashSaleProductModel } from '@/models/flashSaleProduct.model'
@@ -23,7 +24,7 @@ export default function ProductCard({ flashSaleProduct }: IProps) {
   }
 
   return (
-    <div className="max-w-sm bg-white h-[290px] w-[188px] border border-gray-200 rounded-lg hover:shadow">
+    <div className="max-w-sm bg-white h-[290px] w-[188px] border border-gray-200 hover:shadow">
       <a href="#">
         <img className="rounded-t-lg w-[188px] h-[188px]" src="/assets/img/product-01.jpg" alt="" />
         <div className="p-2">
