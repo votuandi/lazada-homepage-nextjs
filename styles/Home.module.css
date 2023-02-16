@@ -1,16 +1,12 @@
-.searchBtn {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(323deg) brightness(102%) contrast(102%);
-  height: 1.5rem;
-  width: 1.5rem;
+.contdown {
   align-self: center;
+  background-color: red;
 }
 
-.timer span {
-  background-color: '#d3232a';
-  padding: ;
-}
-
-.scrollednav {
-  position: fixed;
-  top: 0;
+.contdown span {
+  padding: 4px;
+  letter-spacing: 0.5em;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff
 }

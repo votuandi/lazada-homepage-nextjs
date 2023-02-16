@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
@@ -5,7 +6,6 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
-import { Carousel } from 'react-responsive-carousel'
 import Countdown from 'react-countdown'
 import ProductCard from '@/components/ProductCard'
 import LazMall from '@/components/LazMall'
@@ -20,11 +20,13 @@ import Pagination from '@/components/Pagination'
 import CategoryMenu from '@/components/CategoryMenu'
 import SlideShow from '@/components/SlideShow'
 import Footer from '@/components/Footer'
+import multilanguage from '@/public/lang/multilanguage'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [isShowAH, setShowAH] = useState(true)
+  const [isShowLocalize, setShowLocalize] = useState(false)
   const [topActionLinks, setTopActionLinks] = useState([])
   const [sliderImageId, setSliderImageId] = useState<string[]>(['01'])
   const [modCards, setModCards] = useState([])
@@ -38,6 +40,7 @@ export default function Home() {
   const [showChat, setShowChat] = useState(false)
   const [stickyClass, setStickyClass] = useState('')
   const [isShowMenu, setShowMenu] = useState(true)
+  const [localization, setLocalization] = useState(multilanguage.MultiLanguague('vi'))
 
   const renderer = ({
     hours,
@@ -128,6 +131,16 @@ export default function Home() {
     setShowMenu(window.scrollY < 80)
   }
 
+  let setLanguage = (local: string) => {
+    setLocalization(multilanguage.MultiLanguague(local))
+  }
+
+  let clickTopMenu = (index: number) => {
+    if (index === 6) {
+      setShowLocalize(true)
+    }
+  }
+
   useEffect(() => {
     ;(async () => {
       await getFlashSaleProducts()
@@ -174,12 +187,41 @@ export default function Home() {
 
           <div className={`${stickyClass} flex flex-col z-50 w-screen bg-white`}>
             {isShowMenu && (
-              <div className="relative flex flex-row w-[1200px] justify-evenly self-center bg-slate-50">
+              <div
+                className="relative flex flex-row w-[1200px] justify-evenly self-center bg-slate-50"
+                onMouseLeave={() => {
+                  setShowLocalize(false)
+                }}
+              >
                 {topActionLinks.map((item, ind) => (
-                  <a href="" key={ind} className="cursor-pointer text-xs leading-[25px]">
+                  <a
+                    onClick={() => clickTopMenu(ind)}
+                    key={ind}
+                    className="relative cursor-pointer text-xs leading-[25px]"
+                  >
                     {item}
                   </a>
                 ))}
+                {isShowLocalize && (
+                  <div className=" w-[220px] h-[90px] bg-white border-graytext border-[1px] rounded-xl drop-shadow-xl absolute top-[100%] right-0 z-50 flex flex-col">
+                    <div className=" w-[200px] h-[72px] self-center flex flex-row justify-around pt-2">
+                      <img
+                        className=" rounded-full w-[72px] h-[72px] cursor-pointer"
+                        src="/assets/img/vi.png"
+                        onClick={() => {
+                          setLanguage('vi')
+                        }}
+                      />
+                      <img
+                        className=" rounded-full w-[72px] h-[72px] cursor-pointer"
+                        src="/assets/img/en.jpg"
+                        onClick={() => {
+                          setLanguage('en')
+                        }}
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 
@@ -193,7 +235,7 @@ export default function Home() {
                 <input
                   className="bg-slate-200 p-4 text-base w-[30vw] "
                   type="text"
-                  placeholder="Tìm kiếm trên Lazada"
+                  placeholder={localization.searchHolder}
                 />
                 <button className=" bg-orange-500 h-10 w-10 ml-[auto] flex justify-center content-center">
                   <img
@@ -241,18 +283,17 @@ export default function Home() {
                 ))}
               </div>
               <div className=" relative w-[1200px] flex flex-col self-center pb-6">
-                <h1 className=" relative text-[22px] text-blacktext py-1">Deal Chớp Nhoáng</h1>
+                <h1 className=" relative text-[22px] text-blacktext py-1">
+                  {localization.flashSale}
+                </h1>
                 <div className=" relative bg-white h-[60px] px-4 flex flex-row content-center">
-                  <p className=" text-red-500 self-center">Đang bán</p>
-                  <p className=" self-center mx-10">Kết thúc trong</p>
-                  <Countdown
-                    className=" self-center timer"
-                    date={dateTimer}
-                    renderer={renderer}
-                    overtime={true}
-                  />
+                  <p className=" text-red-500 self-center">{localization.onSaleNow}</p>
+                  <p className=" self-center mx-10">{localization.endingIn}</p>
+                  <div className={styles.contdown}>
+                    <Countdown date={dateTimer} renderer={renderer} overtime={true} />
+                  </div>
                   <button className="ml-[auto] mx-[1px] text-orange-500 border-2 border-orange-500 h-[40px] self-center px-8">
-                    MUA SẮM TOÀN BỘ SẢN PHẨM
+                    {localization.shopAllProducts}
                   </button>
                 </div>{' '}
                 <div className=" relative w-[1200px] h-fit bg-white flex flex-row flex-wrap content-center justify-between p-2">
@@ -286,7 +327,7 @@ export default function Home() {
               <div className=" relative w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
                 <div className=" flex flex-row h-fit leading-[38px] content-center">
                   <span className=" relative text-[22px] text-blacktext py-3 self-center">
-                    Danh mục ngành hàng
+                    {localization.categories}
                   </span>
                 </div>
                 <div className=" relative w-full min-h-[300px] flex flex-row flex-wrap box-border">
@@ -301,7 +342,7 @@ export default function Home() {
               <div className=" relative w-[1200px] flex flex-col self-center  content-center align-baseline">
                 <div className=" flex flex-row h-fit leading-[38px] content-center">
                   <span className=" relative text-[22px] text-blacktext py-3 self-center">
-                    Dành riêng cho bạn
+                    {localization.justForYou}
                   </span>
                 </div>
                 <div className=" relative w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
