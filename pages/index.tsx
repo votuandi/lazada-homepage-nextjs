@@ -41,6 +41,8 @@ export default function Home() {
   const [stickyClass, setStickyClass] = useState('')
   const [isShowMenu, setShowMenu] = useState(true)
   const [localization, setLocalization] = useState(multilanguage.MultiLanguague('vi'))
+  const [isPC, setPC] = useState(true)
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const renderer = ({
     hours,
@@ -143,6 +145,7 @@ export default function Home() {
 
   useEffect(() => {
     ;(async () => {
+      setPC(window.innerWidth > 1200)
       await getFlashSaleProducts()
       await getModCard()
       await getContants()
@@ -241,7 +244,6 @@ export default function Home() {
                   <img
                     className=" h-6 w-6 filter invert-[100%] sepia-[0%] saturate-[0%] hue-rotate-[323deg] brightness-[102%] contrast-[102%] self-center"
                     src="/assets/icon/icon-search.svg"
-                    alt=""
                   />
                 </button>
               </div>
@@ -251,14 +253,26 @@ export default function Home() {
               <img
                 className="object-contain w-[50vw] pc:w-[12vw] h-auto cursor-pointer pt-4 pc:pt-0"
                 src="/assets/img/zalopay.png"
-                alt=""
               />
+              {!isPC && (
+                <button
+                  className=" h-10 w-10 bg-orange-500 mt-5 -mr-2 flex justify-center"
+                  onClick={() => {
+                    setShowMobileMenu(!showMobileMenu)
+                  }}
+                >
+                  <img
+                    className=" h-7 filter invert-[.76] sepia-[.57] saturate-[40.62] hue-rotate-[360deg] brightness-[1.02] contrast-[1.02] self-center"
+                    src="/assets/icon/icon-menu.svg"
+                  />
+                </button>
+              )}
             </div>
           </div>
 
           <div className=" relative flex justify-center content-center w-screen bg-tet my-5">
             <div className=" relative flex flex-row w-screen h-fit pc:w-[1000px] pc:h-[344px] justify-center content-center self-center">
-              <CategoryMenu />
+              <CategoryMenu showMobile={showMobileMenu} />
               <div className="ralative w-screen h-fit pc:w-[1000px] pc:h-[344px] justify-center content-center">
                 <SlideShow images={sliderImageId} />
               </div>

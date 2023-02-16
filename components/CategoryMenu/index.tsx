@@ -2,9 +2,11 @@ import { CategoryMenuModel } from '@/models/categoryMenu.model'
 import * as React from 'react'
 import { useState, useEffect } from 'react'
 
-export interface IProps {}
+export interface IProps {
+  showMobile: boolean
+}
 
-export default function CategoryMenu(props: IProps) {
+export default function CategoryMenu({ showMobile }: IProps) {
   const emptyMenu: CategoryMenuModel = {
     id: '',
     name: '',
@@ -18,7 +20,6 @@ export default function CategoryMenu(props: IProps) {
   const [ssmenu, setSSMenu] = useState<CategoryMenuModel[]>([emptyMenu])
   const [ssindex, setSSIndex] = useState(-1)
   const [isPC, setPC] = useState(false)
-  const [isMobileMenu, setMobileMenu] = useState(false)
 
   let getMenuContent = async () => {
     try {
@@ -138,6 +139,75 @@ export default function CategoryMenu(props: IProps) {
                                     }}
                                   >
                                     <span className=" text-[12px] text-blacktext hover:text-orange-500 py-1">
+                                      {__x}
+                                    </span>
+                                  </div>
+                                ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                  </div>
+                )}
+              </div>
+            ))}
+        </div>
+      )}
+      {!isPC && showMobile && (
+        <div className=" fixed h-screen w-[70vw] shadow-2xl top-0 left-0 bg-white border border-gray-50 flex flex-col justify-start content-center px-1 py-3 hover:cursor-pointer z-50">
+          {menu
+            .map((m: CategoryMenuModel) => m.name)
+            .map((x, i) => (
+              <div key={i}>
+                <div
+                  className=" w-full p-2 flex flex-row hover:bg-gray-200"
+                  onMouseOver={() => {
+                    setMenuItemIndex(i)
+                    setSubMenu(menu[i])
+                  }}
+                >
+                  <span className=" text-base text-blacktext hover:text-orange-500 py-1">{x}</span>
+                  {index === i && smenu.length > 0 && (
+                    <span className="ml-auto pr-2 text-orange-500 absolute right-0 font-black">
+                      &or;
+                    </span>
+                  )}
+                </div>
+                {index >= 0 && index === i && smenu.length > 0 && (
+                  <div className=" relative ml-auto bg-white h-fit w-[65vw] flex flex-col justify-start content-center px-1 pb-3 hover:cursor-pointer border-orange-800 border-b-2">
+                    {smenu
+                      .map((sm: CategoryMenuModel) => sm.name)
+                      .map((_x, _i) => (
+                        <div key={_i}>
+                          <div
+                            className=" flex flex-row hover:bg-gray-200"
+                            onMouseOver={() => {
+                              setSMenuItemIndex(_i)
+                              setSSubMenu(smenu[_i])
+                            }}
+                          >
+                            <span className=" text-base text-blacktext hover:text-orange-500 py-1">
+                              {_x}
+                            </span>
+                            {sindex === _i && ssmenu.length > 0 && (
+                              <span className="ml-auto pr-2 text-orange-500 absolute right-0 font-black">
+                                &or;
+                              </span>
+                            )}
+                          </div>
+                          {sindex >= 0 && sindex === _i && ssmenu.length > 0 && (
+                            <div className=" relative ml-auto bg-white h-fit w-[60vw] flex flex-col justify-start content-center px-1 pb-3 hover:cursor-pointer border-orange-800 border-b-2">
+                              {ssmenu
+                                .map((ssm: CategoryMenuModel) => ssm.name)
+                                .map((__x, __i) => (
+                                  <div
+                                    key={__i}
+                                    onMouseOver={() => {
+                                      setSSMenuItemIndex(__i)
+                                      setSSSubMenu(smenu[__i])
+                                    }}
+                                  >
+                                    <span className=" text-base text-blacktext hover:text-orange-500 py-2">
                                       {__x}
                                     </span>
                                   </div>
