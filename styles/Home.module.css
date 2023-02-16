@@ -1,6 +1,8 @@
 .searchBtn {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(323deg) brightness(102%) contrast(102%);
-  height: 2.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  align-self: center;
 }
 
 .timer span {

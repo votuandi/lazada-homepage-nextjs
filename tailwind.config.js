@@ -19,8 +19,10 @@ module.exports = {
       colors: {
         tet: '#a00809',
         midgray: '#757575',
+        textgrayfooter: '#888888',
         blacktext: '#212121',
         graytext: '#9e9e9e',
+        bluetext: '#0f136d',
         bg: '#f5f5f5'
       }
     }

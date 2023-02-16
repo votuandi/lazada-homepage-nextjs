@@ -19,6 +19,7 @@ import Product from '@/components/Product'
 import Pagination from '@/components/Pagination'
 import CategoryMenu from '@/components/CategoryMenu'
 import SlideShow from '@/components/SlideShow'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -163,9 +164,9 @@ export default function Home() {
           </div>
 
           <div className=" relative flex flex-col ">
-            <div className="relative flex flex-row w-[1200px] justify-evenly self-center bg-slate-50 p-1">
+            <div className="relative flex flex-row w-[1200px] justify-evenly self-center bg-slate-50">
               {topActionLinks.map((item, ind) => (
-                <a href="" key={ind} className="cursor-pointer text-xs">
+                <a href="" key={ind} className="cursor-pointer text-xs leading-[25px]">
                   {item}
                 </a>
               ))}
@@ -173,36 +174,41 @@ export default function Home() {
 
             <div className="relative bg-white h-[75px] flex flex-row content-end justify-around w-[1200px] self-center">
               <img
-                className="object-contain w-[10vw] h-auto"
+                className="object-contain w-[10vw] h-auto cursor-pointer"
                 src="/assets/img/logo-lazada.png"
                 alt=""
               />
-              <div className="w-[30vw] h-10 bg-slate-200 flex content-center justify-start self-center">
+              <div className="w-fit h-10 bg-slate-200 flex content-center justify-start self-center">
                 <input
-                  className="bg-slate-200 p-4 text-base w-[40vw] "
+                  className="bg-slate-200 p-4 text-base w-[30vw] "
                   type="text"
                   placeholder="Tìm kiếm trên Lazada"
                 />
-                <button className=" bg-orange-500 ml-[auto]">
-                  <img className={styles.searchBtn} src="/assets/icon/icon-search.svg" alt="" />
+                <button className=" bg-orange-500 h-10 w-10 ml-[auto] flex justify-center content-center">
+                  <img
+                    className=" h-6 w-6 filter invert-[100%] sepia-[0%] saturate-[0%] hue-rotate-[323deg] brightness-[102%] contrast-[102%] self-center"
+                    src="/assets/icon/icon-search.svg"
+                    alt=""
+                  />
                 </button>
               </div>
               <button>
-                <img className="h-8" src="/assets/icon/icon-cart.svg" alt="" />
+                <img className="h-8 cursor-pointer" src="/assets/icon/icon-cart.svg" alt="" />
               </button>
               <img
-                className="object-contain w-[12vw] h-auto"
+                className="object-contain w-[12vw] h-auto cursor-pointer"
                 src="/assets/img/zalopay.png"
                 alt=""
               />
             </div>
           </div>
 
-          <div className=" relative flex flex-row w-[1200px] h-[344px] justify-center content-center self-center">
-            <CategoryMenu />
-            <div className="ralative w-[1000px] h-[344px] bg-tet justify-center content-center">
-              <SlideShow images={sliderImageId} />
-              {/* <Carousel
+          <div className=" relative flex justify-center content-center w-screen bg-tet my-5">
+            <div className=" relative flex flex-row w-[1200px] h-[344px] justify-center content-center self-center">
+              <CategoryMenu />
+              <div className="ralative w-[1000px] h-[344px]  justify-center content-center">
+                <SlideShow images={sliderImageId} />
+                {/* <Carousel
                 autoPlay={true}
                 infiniteLoop={true}
                 showArrows={false}
@@ -220,6 +226,7 @@ export default function Home() {
                   </div>
                 ))}
               </Carousel> */}
+              </div>
             </div>
           </div>
 
@@ -317,7 +324,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-blue-200 h-28 "></div>
+            <div className=" relative w-screen h-fit flex justify-center bg-bg border-t-2">
+              <Footer />
+            </div>
           </div>
         </div>
       </main>

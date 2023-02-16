@@ -26,7 +26,7 @@ export default function ProductCard({ flashSaleProduct }: IProps) {
   return (
     <div className="max-w-sm bg-white h-[290px] w-[188px] border border-gray-200 hover:shadow">
       <a href="#">
-        <img className="rounded-t-lg w-[188px] h-[188px]" src="/assets/img/product-01.jpg" alt="" />
+        <img className="w-[188px] h-[188px]" src="/assets/img/product-01.jpg" alt="" />
         <div className="p-2">
           <div className="h-[36px] leading-[18px] [display: -webkit-box] [-webkit-box-orient: vertical] [-webkit-line-clamp: 2] overflow-hidden mb-[4px] text-[14px]">
             {flashSaleProduct.name}

@@ -1,0 +1,75 @@
+{
+    "contact": [
+        "Hotline & Chat trực tuyến (24/7)", "Trung tâm hỗ trợ", "Hướng dẫn đặt hàng", "Giao hàng & Nhận hàng", "Chính sách hàng nhập khẩu", "Hướng dẫn đổi trả hàng"
+    ],
+    "aboutus": [
+        "Tất cả danh mục", "Về Lazada Việt Nam", "Bán hàng cùng Lazada", "Chương trình Lazada Afﬁliate", "Tuyển dụng", "Điều khoản sử dụng", "Chính sách bảo mật", "Báo chí", "Bảo vệ quyền sở hữu trí tuệ", "Quy chế hoạt động sàn Lazada", "Quy trình giải quyết tranh chấp, khiếu nại"
+    ],
+    "p1":[
+        "Samsung","Apple","Xiaomi","Bluestone","L’oreal","Maybeline","Enfa","Bobby","Huggies","Adidas","Casio","Mediamart","Juno","Gumac"
+    ],
+    "p2":[
+        {"title": "smartphone",
+        "sp": [
+            "iPhone","Samsung","Xiaomi","Vivo","Vsmart","Oppo","Huawei","iPhone 12","iPhone 11","Redmi Note 8","Galaxy Note","Galaxy A51","Galaxy S21 Ultra","Vsmart Live 4","Vsmart Joy 3"
+        ]},
+        {"title": "MÁY TÍNH BẢNG",
+        "sp": [
+            "iPad","Samsung","Huawei","Lenovo","Kindle","iPad Pro","iPad mini","Masstel","iPad Air 2","iPad Mini 5","LAPTOPS","Dell","Asus","Macbook","HP","Lenovo","Acer","MSI","Microsoft Surface","Macbook Pro","Macbook Air 2018"
+        ]},
+        {"title": "tivi",
+        "sp": [
+            "Sony","LG","Vsmart","Xiaomi","Toshiba","Samsung","Panasonic","Sharp","Asanzo","Asano","TCL"
+        ]},
+        {"title": "âm thanh",
+        "sp": [
+            "Loa Bluetooth","Loa Karaoke","JBL","Sony","Harman Kardon","Bose","Tronsmart","Kiomic","Zealot","LG","Temeisheng","Hoco","Kimiso"
+        ]},
+        {"title": "tủ lạnh",
+        "sp": [
+            "Tủ lạnh mini","Sanyo","Electrolux","Panasonic","Toshiba","Samsung"
+        ]},
+        {"title": "MỸ PHẨM & LÀM ĐẸP",
+        "sp": [
+            "La Roche Posay","MAC","Maybelline","Laneige","Innisfree","Vichy","Hadalabo","Senka","Anessa","The Face Shop","Son Black Rouge","Kiehl’s","Kem Chống Nắng","Sữa Rửa Mặt","Nước Tẩy Trang"
+        ]}
+    ],
+    "p3": [
+        {"title": "máy ảnh",
+        "sp": [
+            "Fujifilm","Nikon","Canon","Sony","Camcorder","GoPro","Flycam","Xiaomi"
+        ]},
+        {"title": "máy giặt",
+        "sp": [
+            "Electrolux","Sanyo","Toshiba","Aqua","Hitachi","Panasonic","Samsung","LG","Bosch","Midea"
+        ]},
+        {"title": "lò vi sóng",
+        "sp": [
+            "Sharp","Electrolux","Bluestone","Samsung","Xiaomi","Beko","Panasonic"
+        ]},
+        {"title": "ô tô xe máy",
+        "sp": [
+            "Honda","Xe máy Yamaha","Taya Motor","Suzuki","Piaggio","Xe Máy Điện"
+        ]},
+        {"title": "TRUYỆN TRANH HAY NHẤT 2021",
+        "sp": [
+            "Thám tử lừng danh Conan","Thanh Gươm Diệt Quỷ Kimetsu Yaiba","One Piece","Đảo Hải Tặc"
+        ]},
+        {"title": "BÁCH HÓA ONLINE",
+        "sp": [
+            "Thức Uống Có Cồn","Strongbow","Heineken","Tiger","Bia 333","Budweiser","Corona","Hoegaarden","Thức Uống Có Ga","Coca-cola","7Up","Pepsi","La Vie","Star Kombucha"
+        ]},
+        {"title": "XU HƯỚNG TÌM KIẾM NỔI BẬT 2021",
+        "sp": [
+            "Sản phẩm mùa dịch Covid-19","Khẩu trang 3M","Khẩu trang Unicharm","Khẩu trang y tế","Nước Rửa Tay Khô","Cà Phê","Nồi Cơm Điện","Giường Ngủ","Đồng Hồ Nữ","Đồng Hồ Nam","Máy Chạy Bộ Điện","Đàn Guitar","Đàn Piano","Ghế Mát Xa","Dép Crocs","Cờ Vua","Nón Sơn","Xe Cẩu","Xe Cẩu","Hoa","Bảng Chữ Cái","Đá Bóng","Áo Bóng Đá","Bikini","Elsa","BKAV","Ivy Moda","MLB","Dirty Coin","Quần Ống Rộng","Vascara"
+        ]},
+        {"title": "MUA SẮM TRÊN TOÀN THẾ GIỚI VỚI ALIEXPRESS",
+        "sp": [
+            "Nga","Tây Ban Nha","Pháp","Đức","Ba Lan","Brazil","Ả Rập Xê-út"
+        ]},
+        {"title": "MUA SẮM TRÊN TOÀN THẾ GIỚI VỚI DARAZ",
+        "sp": [
+            "Pakistan","Bangladesh , Sri Lanka , Myanmar , Nepal"
+        ]}
+    ]
+}
