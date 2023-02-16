@@ -23,7 +23,8 @@ module.exports = {
         blacktext: '#212121',
         graytext: '#9e9e9e',
         bluetext: '#0f136d',
-        bg: '#f5f5f5'
+        bg: '#f5f5f5',
+        chatbox: '#044254'
       }
     }
   },

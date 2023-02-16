@@ -35,6 +35,9 @@ export default function Home() {
   const [products, setProduct] = useState([])
   const [productPerPage, setProductPerPage] = useState(24)
   const [totalPage, setTotalPage] = useState(0)
+  const [showChat, setShowChat] = useState(false)
+  const [stickyClass, setStickyClass] = useState('')
+  const [isShowMenu, setShowMenu] = useState(true)
 
   const renderer = ({
     hours,
@@ -120,6 +123,11 @@ export default function Home() {
     }
   }
 
+  let getScrollY = async () => {
+    setStickyClass(window.scrollY > 80 ? 'sticky top-0' : 'relavite')
+    setShowMenu(window.scrollY < 80)
+  }
+
   useEffect(() => {
     ;(async () => {
       await getFlashSaleProducts()
@@ -128,6 +136,7 @@ export default function Home() {
       await getLazMall()
       await getProductCategories()
       await getProducts(1)
+      window.addEventListener('scroll', getScrollY)
     })()
   }, [])
 
@@ -152,7 +161,7 @@ export default function Home() {
                   />
                 </div>
                 <button
-                  className="font-bold text-2xl text-white absolute right-10 top-2 z-10"
+                  className="font-bold text-2xl text-white absolute right-[20%] top-1 z-10"
                   onClick={() => {
                     setShowAH(false)
                   }}
@@ -163,14 +172,16 @@ export default function Home() {
             )}
           </div>
 
-          <div className=" relative flex flex-col ">
-            <div className="relative flex flex-row w-[1200px] justify-evenly self-center bg-slate-50">
-              {topActionLinks.map((item, ind) => (
-                <a href="" key={ind} className="cursor-pointer text-xs leading-[25px]">
-                  {item}
-                </a>
-              ))}
-            </div>
+          <div className={`${stickyClass} flex flex-col z-50 w-screen bg-white`}>
+            {isShowMenu && (
+              <div className="relative flex flex-row w-[1200px] justify-evenly self-center bg-slate-50">
+                {topActionLinks.map((item, ind) => (
+                  <a href="" key={ind} className="cursor-pointer text-xs leading-[25px]">
+                    {item}
+                  </a>
+                ))}
+              </div>
+            )}
 
             <div className="relative bg-white h-[75px] flex flex-row content-end justify-around w-[1200px] self-center">
               <img
@@ -208,24 +219,6 @@ export default function Home() {
               <CategoryMenu />
               <div className="ralative w-[1000px] h-[344px]  justify-center content-center">
                 <SlideShow images={sliderImageId} />
-                {/* <Carousel
-                autoPlay={true}
-                infiniteLoop={true}
-                showArrows={false}
-                showStatus={false}
-                showIndicators={true}
-                showThumbs={false}
-                width={1000}
-              >
-                {sliderImageId.map((imgId) => (
-                  <div key={imgId}>
-                    <img
-                      className="object-contain h-[344px] w-auto"
-                      src={`assets/img/slide-show-${imgId}.jpg`}
-                    />
-                  </div>
-                ))}
-              </Carousel> */}
               </div>
             </div>
           </div>
@@ -328,6 +321,30 @@ export default function Home() {
               <Footer />
             </div>
           </div>
+          <div
+            className=" w-[160px] h-[40px] z-40 shadow-2xl shadow-chatbox border-chatbox/20 border-b-0 border-[1px] sticky bottom-0 left-[90%] bg-white flex flex-row justify-center content-center cursor-pointer"
+            onClick={() => {
+              setShowChat(true)
+            }}
+          >
+            <img
+              className=" w-6 h-6 self-center filter invert-[13%] sepia-[27%] saturate-[7407%] hue-rotate-[176deg] brightness-[99%] contrast-[97%] mx-2"
+              src="/assets/icon/icon-messages.svg"
+            />
+            <p className="self-center text-chatbox extrabold text-xl">Tin nhắn</p>
+          </div>
+          {showChat && (
+            <div className=" w-[740px] h-[500px] shadow-2xl sticky bottom-0 left-[60%] bg-[#eff0f5] border-chatbox border-[1px] flex flex-row justify-center content-center z-50">
+              <p
+                className="sticky bottom-0 left-[97.5%]  flex flex-row justify-center content-center text-2xl text-chatbox cursor-pointer"
+                onClick={() => {
+                  setShowChat(false)
+                }}
+              >
+                X
+              </p>
+            </div>
+          )}
         </div>
       </main>
     </>
