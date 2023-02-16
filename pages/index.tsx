@@ -398,6 +398,7 @@ export default function Home() {
               >
                 X
               </p>
+              <img className=" w-[90vw] pc:h-[80%] pc:w-auto" src="/assets/img/my-msg.png" />
             </div>
           )}
         </div>
