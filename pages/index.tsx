@@ -25,7 +25,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [isShowAH, setShowAH] = useState(true)
   const [topActionLinks, setTopActionLinks] = useState([])
-  const [sliderImageId, setSliderImageId] = useState(['01'])
+  const [sliderImageId, setSliderImageId] = useState<string[]>(['01'])
   const [modCards, setModCards] = useState([])
   const [dateTimer, setDateTimer] = useState(Date.now() + 40000000)
   const [flashSaleProducts, setFlashSaleProducts] = useState([])

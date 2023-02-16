@@ -4,7 +4,7 @@ import * as React from 'react'
 import { useState, useEffect } from 'react'
 
 export interface IProps {
-  images: []
+  images: string[]
 }
 
 export default function SlideShow({ images }: IProps) {
