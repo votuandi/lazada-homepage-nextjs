@@ -25,6 +25,14 @@ module.exports = {
         bluetext: '#0f136d',
         bg: '#f5f5f5',
         chatbox: '#044254'
+      },
+      screens: {
+
+        'tablet': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'pc': '1200px',
+        // => @media (min-width: 1280px) { ... }
       }
     }
   },

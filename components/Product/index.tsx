@@ -24,9 +24,9 @@ export default function Product({ product }: IProps) {
   }
 
   return (
-    <div className="max-w-sm bg-white h-[325px] w-[189px] border border-gray-200 mb-[20px] hover:shadow">
+    <div className="max-w-sm bg-white h-[325px] w-[188px] border border-gray-200 mb-[20px] hover:shadow">
       <a href="#">
-        <img className=" w-[189px] h-[189px]" src={`/assets/img/product/${product.img}`} alt="" />
+        <img className=" w-[188px] h-[188px]" src={`/assets/img/product/${product.img}`} alt="" />
         <div className=" relative flex flex-col justify-start content-center pt-1 px-2 pb-3">
           <div className=" relative h-[14px]">
             {product.isMall && <img className=" h-3 w-auto" src="/assets/img/laz-mall.png" />}

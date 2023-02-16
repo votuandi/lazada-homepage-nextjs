@@ -17,7 +17,7 @@ export default function Pagination({ amountPage, getProduct }: IProps) {
 
   return (
     <nav aria-label="Page navigation example">
-      <ul className="inline-flex items-center -space-x-px pb-3">
+      <ul className="flex flex-wrap pc:flex-nowrap pc:inline-flex items-center -space-x-px pb-3 justify-center">
         <li onClick={() => pickPageNumber(currentPageNumber === 1 ? 1 : currentPageNumber - 1)}>
           <p className="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">
             &#60; Previous

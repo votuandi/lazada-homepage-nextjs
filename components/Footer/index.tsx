@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import * as React from 'react'
 import { useState, useEffect } from 'react'
@@ -26,46 +27,67 @@ export default function Footer(props: IProps) {
 
   return (
     <div className=" w-screen flex flex-col justify-start content-centerself-center">
-      <div className=" w-[1200px] flex flex-row justify-between py-6 self-center">
-        <img className="w-[388px] h-[79px]" src="assets/img/footer-qc-01.png" alt="" />
-        <img className="w-[388px] h-[79px]" src="assets/img/footer-qc-02.png" alt="" />
-        <img className="w-[388px] h-[79px]" src="assets/img/footer-qc-03.png" alt="" />
+      <div className=" w-screen pc:w-[1200px] flex flex-col pc:flex-row justify-between py-6 self-center">
+        <img
+          className="w-[80vw] h-auto pc:w-[388px] pc:h-[79px] self-center"
+          src="assets/img/footer-qc-01.png"
+        />
+        <img
+          className="w-[80vw] h-auto pc:w-[388px] pc:h-[79px] self-center"
+          src="assets/img/footer-qc-02.png"
+        />
+        <img
+          className="w-[80vw] h-auto pc:w-[388px] pc:h-[79px] self-center"
+          src="assets/img/footer-qc-03.png"
+        />
       </div>
 
-      <div className="w-[1200px] flex flex-row justify-between text-bluetext self-center pt-[20px] pb-[25px]">
-        <div className=" w-[300px] h-fit flex flex-col justify-start">
-          <h1 className=" text-base leading-[35px] uppercase">Liên hệ với Lazada</h1>
+      <div className=" w-screen pc:w-[1200px] flex flex-col pc:flex-row justify-between text-bluetext self-center pt-[20px] pb-[25px]">
+        <div className=" w-[80vw] pc:w-[300px] h-fit flex flex-col justify-start self-center pc:self-start mb-4 pc:mb-0">
+          <h1 className="text-lg pc:text-base leading-[35px] uppercase">Liên hệ với Lazada</h1>
           {footerData?.contact?.map((x, i) => (
-            <a key={i} className=" text-xs hover:underline" href="">
+            <a key={i} className="text-sm pc:text-sm hover:underline" href="">
               {x}
             </a>
           ))}
         </div>
-        <div className=" w-[300px] h-fit flex flex-col justify-start">
-          <h1 className=" text-base leading-[35px] uppercase">Lazada Việt Nam</h1>
+        <div className=" w-[80vw] pc:w-[300px] h-fit flex flex-col justify-start self-center pc:self-start mb-4 pc:mb-0">
+          <h1 className="text-lg pc:text-base leading-[35px] uppercase">Lazada Việt Nam</h1>
           {footerData?.aboutus?.map((x, i) => (
-            <a key={i} className=" text-xs hover:underline" href="">
+            <a key={i} className="text-sm pc:text-sm hover:underline" href="">
               {x}
             </a>
           ))}
         </div>
-        <div className=" w-[600px] h-fit flex flex-col justify-center content-center">
-          <div className=" flex flex-row w-[600px] h-fit">
-            <div className=" flex flex-row w-[300px]">
+        <div className=" w-screen pc:w-[600px] h-fit flex flex-col justify-center content-center">
+          <div className=" flex flex-col pc:flex-row w-screen pc:w-[600px] h-fit">
+            <div className=" flex flex-row w-[80vw] pc:w-[300px] self-center mb-4 pc:mb-0">
               <img className=" w-[42px] h-[42px]" src="/assets/img/logo-download.png" alt="" />
               <div className=" flex flex-col w-[250px] text-base leading-[20px] px-[15px]">
                 <p className=" text-orange-500 w-[250px]">Go where your heart beats</p>
                 <p className=" text-blacktext w-[250px]">Tải App Lazada</p>
               </div>
             </div>
-            <div className=" flex flex-row flex-wrap w-[300px] h-[95px]">
-              <img className="h-[42px] w-auto" src="/assets/img/download-01.png" alt="" />
-              <img className="h-[42px] w-auto" src="/assets/img/download-02.png" alt="" />
-              <img className="h-[42px] w-auto" src="/assets/img/download-03.png" alt="" />
+            <div className=" flex flex-row flex-wrap w-screen h-fit pc:w-[300px] pc:h-[95px] justify-center mb-4 pc:mb-0">
+              <img
+                className="w-[40vw] h-auto pc:h-[42px] pc:w-auto"
+                src="/assets/img/download-01.png"
+                alt=""
+              />
+              <img
+                className="w-[40vw] h-auto pc:h-[42px] pc:w-auto"
+                src="/assets/img/download-02.png"
+                alt=""
+              />
+              <img
+                className="w-[40vw] h-auto pc:h-[42px] pc:w-auto"
+                src="/assets/img/download-03.png"
+                alt=""
+              />
             </div>
           </div>
-          <div>
-            <p className=" text-xs font-extralight text-blacktext p-0 ">
+          <div className="">
+            <p className=" text-sm font-extralight text-blacktext p-2 pc:p-0 mb-4 pc:mb-0">
               CÔNG TY TNHH RECESS
               <br />
               Giấy CNĐKDN: 0308808576 – Ngày cấp: 06/5/2009, được sửa đổi lần thứ 19 ngày 15/8/2019.{' '}
@@ -80,36 +102,36 @@ export default function Footer(props: IProps) {
       <div className=" w-screen bg-white">
         <img className=" w-100% h-auto self-center" src="/assets/img/payment.png" alt="" />
       </div>
-      <div className=" w-[1200px] h-fit flex flex-row self-center py-5">
-        <div className=" w-[300px] h-fit flex flex-col">
-          <h1 className=" uppercase w-[256px] text-base text-textgrayfooter font-normal mb-[5px]">
+      <div className=" w-screen pc:w-[1200px] h-fit flex flex-col pc:flex-row self-center py-5">
+        <div className="w-[80vw] pc:w-[300px] h-fit flex flex-col self-center pc:self-auto">
+          <h1 className=" uppercase pc:w-[256px] text-lg pc:text-base text-textgrayfooter font-normal mb-[5px]">
             LAZADA - NỀN TẢNG MUA SẮM TRỰC TUYẾN HÀNG ĐẦU VIỆT NAM
           </h1>
-          <p className=" text-xs text-textgrayfooter w-[256px] mb-[5px]">
+          <p className=" text-sm pc:text-xs text-textgrayfooter w-[256px] mb-[5px]">
             Thành lập từ năm 2012, Lazada là nền tảng thương mại điện tử hàng đầu Đông Nam Á, tiên
             phong thúc đẩy sự phát triển tại khu vực thông qua Thương mại & Công nghệ. Hiện nay, với
             nền tảng logistics và hệ thống thanh toán lớn nhất khu vực, Lazada trở thành một phần
             trong đời sống của người tiêu dùng và hướng đến mục tiêu phục vụ cho 300 triệu khách
             hàng trên toàn khu vực Đông Nam Á vào năm 2030.
           </p>
-          <p className=" text-xs text-textgrayfooter w-[256px] mb-[5px]">
+          <p className=" text-sm pc:text-xs text-textgrayfooter w-[256px] mb-[5px]">
             Tại Việt Nam, Lazada là nền tảng Thương mại điện tử quen thuộc của hàng triệu người tiêu
             dùng bởi sự đa dạng hàng đầu về chủng loại sản phẩm, ứng dụng công nghệ mua sắm và giải
             trí thông minh cùng khả năng logistics
           </p>
         </div>
-        <div className=" w-[300px] h-fit flex flex-col">
-          <p className=" text-xs text-textgrayfooter w-[256px] mb-[5px]">
+        <div className="w-[80vw] pc:w-[300px] h-fit flex flex-col self-center pc:self-auto">
+          <p className=" text-sm pc:text-xs text-textgrayfooter w-[256px] mb-[5px]">
             mạnh mẽ và dịch vụ chăm sóc khách hàng tối ưu. Đáng chú ý, bên cạnh các chương trình ưu
             đãi trực tuyến hấp dẫn hàng tháng hấp dẫn thường xuyên, Lazada Việt Nam còn thu hút
             người dùng với các Lễ Hội Mua Sắm siêu lớn trong năm, đây được xem là các thời điểm mua
             sắm không thể bỏ lỡ của các tín đồ mua sắm trên toàn quốc.
           </p>
-          <p className=" text-xs text-textgrayfooter w-[256px] mb-[5px]">
+          <p className=" text-sm pc:text-xs text-textgrayfooter w-[256px] mb-[5px]">
             Hãy truy cập website hoặc tải ngay ứng dụng Lazada để gia tăng thêm nhiều trải nghiệm
             độc đáo cho hành trình mua sắm – giải trí tuyệt vời và siêu tiết kiệm ngay hôm nay!
           </p>
-          <h1 className=" uppercase w-[256px] text-base text-textgrayfooter font-normal mb-[5px]">
+          <h1 className=" uppercase pc:w-[256px] text-lg pc:text-base text-textgrayfooter font-normal mb-[5px] mt-4 pc:mt-0">
             SẢN PHẨM CHÍNH HÃNG
           </h1>
           <div className=" w-[256px] flex flex-row flex-wrap -ml-1">
@@ -123,13 +145,13 @@ export default function Footer(props: IProps) {
             ))}
           </div>
         </div>
-        <div className=" w-[300px] h-fit flex flex-col">
-          <h1 className=" uppercase w-[256px] text-base text-textgrayfooter font-normal mb-[5px]">
+        <div className="w-[80vw] pc:w-[300px] h-fit flex flex-col self-center pc:select-auto">
+          <h1 className=" uppercase pc:w-[256px] text-lg pc:text-base text-textgrayfooter font-normal mb-[5px] mt-4 pc:mt-0">
             SẢN PHẨM NỔI BẬT
           </h1>
           {footerData?.p2?.map((t, i) => (
             <div key={i}>
-              <p className=" text-xs text-textgrayfooter w-[256px] mb-[5px] uppercase">{t.title}</p>
+              <p className=" text-sm text-textgrayfooter w-[256px] mb-[5px] uppercase">{t.title}</p>
               <div className=" w-[256px] flex flex-row flex-wrap mb-3 -ml-1">
                 {t.sp.map((p, j) => (
                   <span
@@ -143,10 +165,10 @@ export default function Footer(props: IProps) {
             </div>
           ))}
         </div>
-        <div className=" w-[300px] h-fit flex flex-col">
+        <div className="w-[80vw] pc:w-[300px] h-fit flex flex-col self-center pc:select-auto">
           {footerData?.p3?.map((t, i) => (
             <div key={i}>
-              <p className=" text-xs text-textgrayfooter w-[256px] mb-[5px] uppercase">{t.title}</p>
+              <p className=" text-sm text-textgrayfooter w-[256px] mb-[5px] uppercase">{t.title}</p>
               <div className=" w-[256px] flex flex-row flex-wrap mb-3 -ml-1">
                 {t.sp.map((p, j) => (
                   <span

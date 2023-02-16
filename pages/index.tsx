@@ -166,15 +166,15 @@ export default function Home() {
           <div className="w-screen">
             {isShowAH === true && (
               <>
-                <div className="relative w-screen h-[80px] bg-tet">
+                <div className="relative w-screen h-fit pc:h-[80px] bg-tet">
                   <img
-                    className="object-contain w-screen h-[80px]"
+                    className="object-contain w-screen h-auto pc:h-[80px]"
                     src="/assets/img/qc-head.png"
                     alt=""
                   />
                 </div>
                 <button
-                  className="font-bold text-2xl text-white absolute right-[20%] top-1 z-10"
+                  className="font-bold text-xl pc:text-2xl text-white absolute right-16 pc:right-[20%] top-0 pc:top-1 z-10"
                   onClick={() => {
                     setShowAH(false)
                   }}
@@ -188,7 +188,7 @@ export default function Home() {
           <div className={`${stickyClass} flex flex-col z-50 w-screen bg-white`}>
             {isShowMenu && (
               <div
-                className="relative flex flex-row w-[1200px] justify-evenly self-center bg-slate-50"
+                className="relative flex flex-row w-screen flex-wrap pc:w-[1200px] justify-evenly self-center bg-slate-50"
                 onMouseLeave={() => {
                   setShowLocalize(false)
                 }}
@@ -197,7 +197,7 @@ export default function Home() {
                   <a
                     onClick={() => clickTopMenu(ind)}
                     key={ind}
-                    className="relative cursor-pointer text-xs leading-[25px]"
+                    className="relative cursor-pointer text-xs leading-8 pc:leading-[25px] w-[50vw] pc:w-fit text-center"
                   >
                     {item}
                   </a>
@@ -225,19 +225,19 @@ export default function Home() {
               </div>
             )}
 
-            <div className="relative bg-white h-[75px] flex flex-row content-end justify-around w-[1200px] self-center">
+            <div className="relative bg-white flex flex-row content-end justify-around w-screen pc:w-[1200px] h-auto pc:h-[75px] self-center flex-wrap pc:flex-nowrap">
               <img
-                className="object-contain w-[10vw] h-auto cursor-pointer"
+                className="object-contain w-[15vw] pc:w-[10vw] h-auto cursor-pointer"
                 src="/assets/img/logo-lazada.png"
                 alt=""
               />
               <div className="w-fit h-10 bg-slate-200 flex content-center justify-start self-center">
                 <input
-                  className="bg-slate-200 p-4 text-base w-[30vw] "
+                  className="bg-slate-200 p-4 text-base w-[60vw] pc:w-[30vw] "
                   type="text"
                   placeholder={localization.searchHolder}
                 />
-                <button className=" bg-orange-500 h-10 w-10 ml-[auto] flex justify-center content-center">
+                <button className=" bg-orange-500 h-10 pc pc:w-10 ml-[auto] flex justify-center content-center">
                   <img
                     className=" h-6 w-6 filter invert-[100%] sepia-[0%] saturate-[0%] hue-rotate-[323deg] brightness-[102%] contrast-[102%] self-center"
                     src="/assets/icon/icon-search.svg"
@@ -249,7 +249,7 @@ export default function Home() {
                 <img className="h-8 cursor-pointer" src="/assets/icon/icon-cart.svg" alt="" />
               </button>
               <img
-                className="object-contain w-[12vw] h-auto cursor-pointer"
+                className="object-contain w-[50vw] pc:w-[12vw] h-auto cursor-pointer pt-4 pc:pt-0"
                 src="/assets/img/zalopay.png"
                 alt=""
               />
@@ -257,20 +257,20 @@ export default function Home() {
           </div>
 
           <div className=" relative flex justify-center content-center w-screen bg-tet my-5">
-            <div className=" relative flex flex-row w-[1200px] h-[344px] justify-center content-center self-center">
+            <div className=" relative flex flex-row w-screen h-fit pc:w-[1000px] pc:h-[344px] justify-center content-center self-center">
               <CategoryMenu />
-              <div className="ralative w-[1000px] h-[344px]  justify-center content-center">
+              <div className="ralative w-screen h-fit pc:w-[1000px] pc:h-[344px] justify-center content-center">
                 <SlideShow images={sliderImageId} />
               </div>
             </div>
           </div>
 
           <div className="relative w-screen flex flex-col">
-            <div className=" relative flex flex-col justify-center content-end w-screen min-w-[1200px] h-fit pt-[200px] bg-[url(//icms-image.slatic.net/images/ims-web/0fe02511-83d8-4ac8-a3f6-7f1cb8177e84.gif)]">
-              <div className="relative w-[1200px] py-4 content-center justify-between flex flex-row self-center">
+            <div className=" relative flex flex-col justify-center content-end w-screen pc:min-w-[1200px] h-fit pc:pt-[200px] pc:bg-[url(//icms-image.slatic.net/images/ims-web/0fe02511-83d8-4ac8-a3f6-7f1cb8177e84.gif)]">
+              <div className="relative w-screen pc:w-[1200px] mx-2 pc:mx-0 py-4 content-center justify-between flex flex-row self-center flex-wrap pc:flex-nowrap">
                 {modCards.map((modcard: ModCardModel) => (
                   <div
-                    className=" h-[40px] w-[288px] px-1 bg-white flex flex-row flex-wrap content-center justify-start rounded-2xl"
+                    className=" w-[49vw] h-[72px] pc:h-[40px] pc:w-[288px] my-2 px-1 bg-white flex flex-row content-center justify-start rounded-2xl shadow"
                     key={modcard.id}
                   >
                     <img
@@ -282,21 +282,21 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className=" relative w-[1200px] flex flex-col self-center pb-6">
-                <h1 className=" relative text-[22px] text-blacktext py-1">
+              <div className=" relative w-screen pc:w-[1200px] flex flex-col self-center pb-6 justify-center pc:justify-start">
+                <h1 className=" relative text-[22px] text-blacktext py-1 px-3 pc:px-0">
                   {localization.flashSale}
                 </h1>
-                <div className=" relative bg-white h-[60px] px-4 flex flex-row content-center">
+                <div className=" relative bg-white h-fit pc:h-[60px] px-3 flex flex-row flex-wrap pc:flex-nowrap content-center">
                   <p className=" text-red-500 self-center">{localization.onSaleNow}</p>
                   <p className=" self-center mx-10">{localization.endingIn}</p>
                   <div className={styles.contdown}>
                     <Countdown date={dateTimer} renderer={renderer} overtime={true} />
                   </div>
-                  <button className="ml-[auto] mx-[1px] text-orange-500 border-2 border-orange-500 h-[40px] self-center px-8">
+                  <button className="pc:ml-[auto] pc:mx-[1px] my-2 pc:my:0 text-orange-500 border-2 border-orange-500 h-10 rounded-xl pc:rounded-none pc:h-[40px] self-center px-8">
                     {localization.shopAllProducts}
                   </button>
                 </div>{' '}
-                <div className=" relative w-[1200px] h-fit bg-white flex flex-row flex-wrap content-center justify-between p-2">
+                <div className=" relative w-screen pc:w-[1200px] h-fit bg-white flex flex-row flex-wrap content-center justify-between p-2">
                   {flashSaleProducts.map((p: FlashSaleProductModel) => (
                     <div className="self-center" key={p.id}>
                       <ProductCard flashSaleProduct={p} />
@@ -306,8 +306,8 @@ export default function Home() {
               </div>
             </div>
             <div className="relative flex flex-col justify-center content-center w-screen bg-bg">
-              <div className=" relative w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
-                <div className=" flex flex-row h-[38px] leading-[38px] content-center">
+              <div className=" relative w-screen pc:w-[1200px] flex flex-col self-center pc:pb-10 content-center align-baseline">
+                <div className=" flex flex-row h-[38px] leading-[38px] content-center px-3 pc:px-0">
                   <span className=" relative text-[22px] text-blacktext py-3 self-center">
                     Laz Mall
                   </span>
@@ -315,44 +315,44 @@ export default function Home() {
                     <span className=" text-blue-500 font-medium self-center">Xem thêm &gt;</span>
                   </a>
                 </div>
-                <div className=" relative w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
+                <div className=" relative w-screen pc:w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
                   {lazMalls.map((lazm: LazMallModel) => (
-                    <div className="self-center" key={lazm.id}>
+                    <div className="self-center mb-1 pc:mb-0" key={lazm.id}>
                       <LazMall lazMall={lazm} />
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className=" relative w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
-                <div className=" flex flex-row h-fit leading-[38px] content-center">
+              <div className=" relative w-screen pc:w-[1200px] flex flex-col self-center pb-10 content-center align-baseline">
+                <div className=" flex flex-row h-fit leading-[38px] content-center mx-3 pc:mx-0">
                   <span className=" relative text-[22px] text-blacktext py-3 self-center">
                     {localization.categories}
                   </span>
                 </div>
-                <div className=" relative w-full min-h-[300px] flex flex-row flex-wrap box-border">
+                <div className=" relative w-screen pc:w-full min-h-[300px] flex flex-row flex-wrap box-border">
                   {productCategories.map((prc: ProductCategoryModel) => (
-                    <div className="self-center" key={prc.id}>
+                    <div className="self-center flex-wrap pc:flex-nowrap" key={prc.id}>
                       <ProductCategory productCategory={prc} />
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className=" relative w-[1200px] flex flex-col self-center  content-center align-baseline">
-                <div className=" flex flex-row h-fit leading-[38px] content-center">
+              <div className=" relative w-screen pc:w-[1200px] flex flex-col self-center  content-center align-baseline">
+                <div className=" flex flex-row h-fit leading-[38px] content-center mx-3 pc:mx-0">
                   <span className=" relative text-[22px] text-blacktext py-3 self-center">
                     {localization.justForYou}
                   </span>
                 </div>
-                <div className=" relative w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
+                <div className=" relative w-screen pc:w-[1200px] h-fit flex flex-row flex-wrap content-center justify-between p-2">
                   {products.map((p: ProductModel, i) => (
                     <div className="self-center" key={i}>
                       <Product product={p} />
                     </div>
                   ))}
                 </div>
-                <div className=" relative self-center">
+                <div className=" relative self-center w-screen pc:w-fit">
                   <Pagination amountPage={totalPage} getProduct={getProducts} />
                 </div>
               </div>
@@ -375,9 +375,9 @@ export default function Home() {
             <p className="self-center text-chatbox extrabold text-xl">Tin nhắn</p>
           </div>
           {showChat && (
-            <div className=" w-[740px] h-[500px] shadow-2xl sticky bottom-0 left-[60%] bg-[#eff0f5] border-chatbox border-[1px] flex flex-row justify-center content-center z-50">
+            <div className="w-sreen h-[60vh] pc:w-[740px] pc:h-[500px] rounded-t-2xl shadow-inner pc:rounded-none pc:shadow-none sticky bottom-0 left-0 pc:left-[60%] bg-[#eff0f5] border-chatbox border-[1px] flex flex-row justify-center content-center z-50">
               <p
-                className="sticky bottom-0 left-[97.5%]  flex flex-row justify-center content-center text-2xl text-chatbox cursor-pointer"
+                className="sticky bottom-0 left-[92%] pc:left-[97.5%]  flex flex-row justify-center content-center text-2xl text-chatbox cursor-pointer"
                 onClick={() => {
                   setShowChat(false)
                 }}
